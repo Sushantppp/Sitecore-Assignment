@@ -1,0 +1,58 @@
+﻿@using Sitecore.Mvc
+@*@using Sitecore.Mvc.Presentation
+@using Sitecore.Mvc.Helpers*@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/Style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Partners</title>
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .partner-section {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .icons {
+            flex: 0 0 30%;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .logos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+        }
+
+        .partner-logo {
+            text-align: center;
+        }
+
+            .partner-logo img {
+                max-width: 100%;
+                height: auto;
+            }
+
+        .heading {
+            font-size: 30px;
+            font-style: cambria;
+            margin-left: 40px;
+            line-height: 0.2;
+        }
+    </style>
+</head>
+
+<body>
+    @Html.Sitecore().Placeholder("Card")
+    
+</body>
+</html>

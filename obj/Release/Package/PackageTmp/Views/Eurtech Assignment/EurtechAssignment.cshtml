@@ -1,0 +1,1052 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@using Sitecore.Mvc.Helpers
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sitecore Assignment</title>
+    <link rel="stylesheet" href="~/Eurtech CSS/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+</head>
+<body>
+    @Html.Sitecore().Placeholder("Header")
+    <div class="fix">
+        <div class="offcanvas__info">
+            <div class="offcanvas__wrapper">
+                <div class="offcanvas__content">
+                    <div class="offcanvas__top mb-40 d-flex justify-content-between align-items-center">
+                        <div class="offcanvas__logo logo">
+                            <a href="/">
+                                <img src="/assets/img/logo/logo-2.png" alt="logo not found" />
+                            </a>
+                        </div>
+                        <div class="offcanvas__close">
+                            <button><i class="fal fa-times"></i></button>
+                        </div>
+                    </div>
+                    <div class="offcanvas__search mb-25">
+                        <form action="#">
+                            <input type="text"
+                                   placeholder="What are you searching for?" /><button type="submit"><i class="far fa-search"></i></button>
+                        </form>
+                    </div>
+                    <nav class="side-mobile-menu d-block d-lg-none mm-menu">
+                        <ul>
+                            <li class="menu-item-has-children has-droupdown">
+                                <a>Home</a>
+                                <ul class="sub-menu">
+                                    <li><a href="/">Home Style 1</a></li>
+                                    <li><a href="/home-2">Home Style 2</a></li>
+                                    <li><a href="/home-3">Home Style 3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/about">About</a></li>
+                            <li class="menu-item-has-children has-droupdown">
+                                <a>Services</a>
+                                <ul class="sub-menu">
+                                    <li><a href="/service">Services</a></li>
+                                    <li><a href="/service-details">Service Details</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children has-droupdown">
+                                <a>Blog</a>
+                                <ul class="sub-menu">
+                                    <li><a href="/blog">Blog</a></li>
+                                    <li><a href="/blog-details">Blog Details</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children has-droupdown">
+                                <a>Pages</a>
+                                <ul class="sub-menu">
+                                    <li><a href="/team">Team</a></li>
+                                    <li><a href="/team-details">Team Details</a></li>
+                                    <li><a href="/case-study">Case Study</a></li>
+                                    <li><a href="/case-details">Case Details</a></li>
+                                    <li><a href="/pricing">Pricing</a></li>
+                                    <li><a href="/faq">FAQ</a></li>
+                                    <li><a href="/error">404 Page</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="offcanvas__contact mt-30 mb-20">
+                        <h4>Contact Info</h4>
+                        <ul>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon mr-15">
+                                    <i class="fal fa-map-marker-alt"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a target="_blank"
+                                       href="">12/A, Mirnada City Tower, NYC</a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon mr-15">
+                                    <i class="far fa-phone"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a href="tel:+088889797697">+088889797697</a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon mr-15">
+                                    <i class="fal fa-envelope"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a href="tel:+012-345-6789">
+                                        <span class="mailto:support@mail.com">support@mail.com</span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="offcanvas__social">
+                        <ul>
+                            <li>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="offcanvas-overlay"></div>
+
+    <main>
+        @Html.Sitecore().Placeholder("HeroBanner")
+        @Html.Sitecore().Placeholder("AboutUs")
+
+        <section class="counter__area z-index-11 include__bg">
+            <div class="container">
+                <div class="counter__bg-area include__bg pt-65 pb-35"
+                     style="background: url('/assets/img/counter-bg.jpg')">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-3 col-md-6 mb-30">
+                            <div class="counter__item text-center">
+                                <div class="counter__item-number">
+                                    <h2 class="counter">
+                                        <div class="d-inline-flex">
+                                            <div class="counter-count">30</div>
+                                            <span><span></span></span>
+                                        </div>
+                                    </h2>
+                                    <p>
+                                        Year experience <br />
+                                        in this field
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 mb-30">
+                            <div class="counter__item text-center">
+                                <div class="counter__item-number">
+                                    <h2 class="counter">
+                                        <div class="d-inline-flex">
+                                            <div class="counter-count">696</div>
+                                            <span><span></span></span>
+                                        </div>
+                                    </h2>
+                                    <p>Worldwide good <br />clientse</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 mb-30">
+                            <div class="counter__item text-center">
+                                <div class="counter__item-number">
+                                    <h2 class="counter">
+                                        <div class="d-inline-flex">
+                                            <div class="counter-count">1200</div>
+                                            <span><span></span></span>
+                                        </div>
+                                    </h2>
+                                    <p>Worldwide Captured <br />online base</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 mb-30">
+                            <div class="counter__item text-center">
+                                <div class="counter__item-number">
+                                    <h2 class="counter">
+                                        <div class="d-inline-flex">
+                                            <div class="counter-count">5</div>
+                                            <span><span></span></span>
+                                        </div>
+                                    </h2>
+                                    <p>Masterclass Team <br />ever made</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        @Html.Sitecore().Placeholder("Services")
+        <!-- <section
+          class="skill__area skill__bg pt-120 pb-60"
+          data-wow-delay=".3s"
+          style="background: url('/assets/img/skill-map.png')"
+        > -->
+        <section class="skill__area skill__bg pt-120 pb-60"
+                 data-wow-delay=".3s">
+            <div class="container">
+                <div class="row align-items-center wow fadeInUp" data-wow-delay=".3s">
+                    <div class="col-xl-5 col-lg-6">
+                        <div class="skill-progress mb-60">
+                            <div class="section__title-one s-3 mb-40">
+                                <span>// Some Facts</span>
+                                <h2>The best customer experience</h2>
+                            </div>
+                            <div class="progress-skill-item fix">
+                                <h4>Design &amp; Servicing</h4>
+                                <span class="progress-count">64%</span>
+                                <div class="progress">
+                                    <div class="progress-bar wow slideInLeft"
+                                         data-wow-duration="1s"
+                                         data-wow-delay=".3s"
+                                         role="progressbar"
+                                         data-width="64%"
+                                         aria-valuenow="25"
+                                         aria-valuemin="0"
+                                         aria-valuemax="100"
+                                         style="width: 64%; visibility: visible"></div>
+                                </div>
+                            </div>
+                            <div class="progress-skill-item fix">
+                                <h4>Support &amp; Productivity</h4>
+                                <span class="progress-count">82%</span>
+                                <div class="progress">
+                                    <div class="progress-bar wow slideInLeft"
+                                         data-wow-duration="1s"
+                                         data-wow-delay=".3s"
+                                         role="progressbar"
+                                         data-width="82%"
+                                         aria-valuenow="25"
+                                         aria-valuemin="0"
+                                         aria-valuemax="100"
+                                         style="width: 82%; visibility: visible"></div>
+                                </div>
+                            </div>
+                            <div class="progress-skill-item fix">
+                                <h4>Troubleshooting</h4>
+                                <span class="progress-count">70%</span>
+                                <div class="progress">
+                                    <div class="progress-bar wow slideInLeft"
+                                         data-wow-duration="1s"
+                                         data-wow-delay=".3s"
+                                         role="progressbar"
+                                         data-width="70%"
+                                         aria-valuenow="25"
+                                         aria-valuemin="0"
+                                         aria-valuemax="100"
+                                         style="width: 70%; visibility: visible"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-6">
+                        <div class="skill__image-wrapper mb-60">
+                            <div class="skill__image pl-25 p-relative w-img">
+                                <img src="/assets/img/skills-img.png"
+                                     alt="image not found" />
+                                <span class="skill__video-btn popup-video">
+                                    ▶
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="speed-area include__bg grey-bg pt-120 pb-90"
+                 style="background: url('/assets/img/bg/speed-pattern.png')">
+            <div class="container">
+                <div class="row justify-content-center wow fadeInUp"
+                     data-wow-delay=".3s">
+                    <div class="section__title-one text-center mb-50">
+                        <span>// Services //</span>
+                        <h2>What we do here</h2>
+                    </div>
+                </div>
+                <div class="row justify-content-center wow fadeInUp"
+                     data-wow-delay=".3s">
+                    <div class="col-xl-12">
+                        <div class="speed__input-wrapper">
+                            <form>
+                                <div class="speed__input-item">
+                                    <div class="speed__input mb-30">
+                                        <input type="email"
+                                               placeholder="Email address"
+                                               style="
+                          background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpiYmZkZTQxOS00ZGRkLWU5NDYtOWQ2MC05OGExNGJiMTA3N2YiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RDAyNDkwMkRDOTIyMTFFNkI0MzFGRTk2RjM1OTdENTciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RDAyNDkwMkNDOTIyMTFFNkI0MzFGRTk2RjM1OTdENTciIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OTU2NTE1NDItMmIzOC1kZjRkLTk0N2UtN2NjOTlmMjQ5ZGFjIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOmJiZmRlNDE5LTRkZGQtZTk0Ni05ZDYwLTk4YTE0YmIxMDc3ZiIv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') !important;
+                          background-repeat: no-repeat;
+                          background-size: 20px;
+                          background-position: 97% center;
+                          cursor: auto;
+                        "
+                                               data-temp-mail-org="0" /><i class="fa-solid fa-envelope-open"></i>
+                                    </div>
+                                    <div class="speed__input mb-30">
+                                        <input type="email"
+                                               placeholder="Website name"
+                                               style="
+                          background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpiYmZkZTQxOS00ZGRkLWU5NDYtOWQ2MC05OGExNGJiMTA3N2YiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RDAyNDkwMkRDOTIyMTFFNkI0MzFGRTk2RjM1OTdENTciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RDAyNDkwMkNDOTIyMTFFNkI0MzFGRTk2RjM1OTdENTciIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OTU2NTE1NDItMmIzOC1kZjRkLTk0N2UtN2NjOTlmMjQ5ZGFjIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOmJiZmRlNDE5LTRkZGQtZTk0Ni05ZDYwLTk4YTE0YmIxMDc3ZiIv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') !important;
+                          background-repeat: no-repeat;
+                          background-size: 20px;
+                          background-position: 97% center;
+                          cursor: auto;
+                        "
+                                               data-temp-mail-org="1" /><i class="fa-brands fa-firefox-browser"></i>
+                                    </div>
+                                    <div class="cta-btn mb-30">
+                                        <button type="button" class="it__btn-2">
+                                            <span>test speed</span><i class="bdevs-btn-icon fas fa-angle-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="portfolio__area fix pt-120 pb-120">
+            <div class="container">
+                <div class="row wow fadeInUp" data-wow-delay=".3s">
+                    <div class="col-sm-8">
+                        <div class="section-title-wrapper mb-50">
+                            <div class="section__title-one">
+                                <span>// Portfolio</span>
+                                <h2>Case studies</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 text-end">
+                        <div class="case__study-nav mt-10">
+                            <button class="case-study-button-prev"
+                                    tabindex="0"
+                                    aria-label="Previous slide"
+                                    aria-controls="swiper-wrapper-a10f077b2fad55114">
+                                <i class="fa-regular fa-angle-left"></i>
+                            </button><button class="case-study-button-next"
+                                             tabindex="0"
+                                             aria-label="Next slide"
+                                             aria-controls="swiper-wrapper-a10f077b2fad55114">
+                                <i class="fa-regular fa-angle-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="case-study-active swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper swiper-initialized swiper-horizontal"
+                         autoplaydisableoninteraction="false">
+                        <div class="swiper-wrapper"
+                             id="swiper-wrapper-a10f077b2fad55114"
+                             aria-live="off"
+                             style="
+                  transition-duration: 0ms;
+                  transform: translate3d(-1244px, 0px, 0px);
+                ">
+                            <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
+                                 data-swiper-slide-index="3"
+                                 style="width: 384.667px; margin-right: 30px"
+                                 role="group"
+                                 aria-label="4 / 6">
+                                <div class="swiper-slides case-study-item">
+                                    <div class="case__study-thumb">
+                                        <img src="/assets/img/case-study-4.jpg"
+                                             alt="image not found" />
+                                        <div class="case__study-content">
+                                            <h3><a href="/case-details/4">Product Analysis</a></h3>
+                                            <p>
+                                                If you’ve built up your IT system over a period of
+                                                time.
+                                            </p>
+                                            <a class="case__study-btn" href="/case-details/4">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide-duplicate"
+                                 data-swiper-slide-index="4"
+                                 style="width: 384.667px; margin-right: 30px"
+                                 role="group"
+                                 aria-label="5 / 6">
+                                <div class="swiper-slides case-study-item">
+                                    <div class="case__study-thumb">
+                                        <img src="/assets/img/case-study-5.jpg"
+                                             alt="image not found" />
+                                        <div class="case__study-content">
+                                            <h3><a href="/case-details/5">App UX Studies</a></h3>
+                                            <p>
+                                                If you’ve built up your IT system over a period of
+                                                time.
+                                            </p>
+                                            <a class="case__study-btn" href="/case-details/5">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide-duplicate swiper-slide-prev"
+                                 data-swiper-slide-index="5"
+                                 style="width: 384.667px; margin-right: 30px"
+                                 role="group"
+                                 aria-label="6 / 6">
+                                <div class="swiper-slides case-study-item">
+                                    <div class="case__study-thumb">
+                                        <img src="/assets/img/case-study-6.jpg"
+                                             alt="image not found" />
+                                        <div class="case__study-content">
+                                            <h3>
+                                                <a href="/case-details/6">Kratos iOS App Design</a>
+                                            </h3>
+                                            <p>
+                                                If you’ve built up your IT system over a period of
+                                                time.
+                                            </p>
+                                            <a class="case__study-btn" href="/case-details/6">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide-active"
+                                 data-swiper-slide-index="0"
+                                 style="width: 384.667px; margin-right: 30px"
+                                 role="group"
+                                 aria-label="1 / 6">
+                                <div class="swiper-slides case-study-item">
+                                    <div class="case__study-thumb">
+                                        <img src="/assets/img/case-study-1.jpg"
+                                             alt="image not found" />
+                                        <div class="case__study-content">
+                                            <h3><a href="/case-details/1">Cyber Security</a></h3>
+                                            <p>
+                                                If you’ve built up your IT system over a period of
+                                                time.
+                                            </p>
+                                            <a class="case__study-btn" href="/case-details/1">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide-next"
+                                 data-swiper-slide-index="1"
+                                 style="width: 384.667px; margin-right: 30px"
+                                 role="group"
+                                 aria-label="2 / 6">
+                                <div class="swiper-slides case-study-item">
+                                    <div class="case__study-thumb">
+                                        <img src="/assets/img/case-study-2.jpg"
+                                             alt="image not found" />
+                                        <div class="case__study-content">
+                                            <h3><a href="/case-details/2">Problem Solutions</a></h3>
+                                            <p>
+                                                If you’ve built up your IT system over a period of
+                                                time.
+                                            </p>
+                                            <a class="case__study-btn" href="/case-details/2">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide"
+                                 data-swiper-slide-index="2"
+                                 style="width: 384.667px; margin-right: 30px"
+                                 role="group"
+                                 aria-label="3 / 6">
+                                <div class="swiper-slides case-study-item">
+                                    <div class="case__study-thumb">
+                                        <img src="/assets/img/case-study-3.jpg"
+                                             alt="image not found" />
+                                        <div class="case__study-content">
+                                            <h3><a href="/case-details/3">Web Analysis</a></h3>
+                                            <p>
+                                                If you’ve built up your IT system over a period of
+                                                time.
+                                            </p>
+                                            <a class="case__study-btn" href="/case-details/3">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide"
+                                 data-swiper-slide-index="3"
+                                 style="width: 384.667px; margin-right: 30px"
+                                 role="group"
+                                 aria-label="4 / 6">
+                                <div class="swiper-slides case-study-item">
+                                    <div class="case__study-thumb">
+                                        <img src="/assets/img/case-study-4.jpg"
+                                             alt="image not found" />
+                                        <div class="case__study-content">
+                                            <h3><a href="/case-details/4">Product Analysis</a></h3>
+                                            <p>
+                                                If you’ve built up your IT system over a period of
+                                                time.
+                                            </p>
+                                            <a class="case__study-btn" href="/case-details/4">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide"
+                                 data-swiper-slide-index="4"
+                                 style="width: 384.667px; margin-right: 30px"
+                                 role="group"
+                                 aria-label="5 / 6">
+                                <div class="swiper-slides case-study-item">
+                                    <div class="case__study-thumb">
+                                        <img src="/assets/img/case-study-5.jpg"
+                                             alt="image not found" />
+                                        <div class="case__study-content">
+                                            <h3><a href="/case-details/5">App UX Studies</a></h3>
+                                            <p>
+                                                If you’ve built up your IT system over a period of
+                                                time.
+                                            </p>
+                                            <a class="case__study-btn" href="/case-details/5">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide-duplicate-prev"
+                                 data-swiper-slide-index="5"
+                                 style="width: 384.667px; margin-right: 30px"
+                                 role="group"
+                                 aria-label="6 / 6">
+                                <div class="swiper-slides case-study-item">
+                                    <div class="case__study-thumb">
+                                        <img src="/assets/img/case-study-6.jpg"
+                                             alt="image not found" />
+                                        <div class="case__study-content">
+                                            <h3>
+                                                <a href="/case-details/6">Kratos iOS App Design</a>
+                                            </h3>
+                                            <p>
+                                                If you’ve built up your IT system over a period of
+                                                time.
+                                            </p>
+                                            <a class="case__study-btn" href="/case-details/6">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide-duplicate"
+                                 data-swiper-slide-index="0"
+                                 style="width: 384.667px; margin-right: 30px"
+                                 role="group"
+                                 aria-label="1 / 6">
+                                <div class="swiper-slides case-study-item">
+                                    <div class="case__study-thumb">
+                                        <img src="/assets/img/case-study-1.jpg"
+                                             alt="image not found" />
+                                        <div class="case__study-content">
+                                            <h3><a href="/case-details/1">Cyber Security</a></h3>
+                                            <p>
+                                                If you’ve built up your IT system over a period of
+                                                time.
+                                            </p>
+                                            <a class="case__study-btn" href="/case-details/1">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next"
+                                 data-swiper-slide-index="1"
+                                 style="width: 384.667px; margin-right: 30px"
+                                 role="group"
+                                 aria-label="2 / 6">
+                                <div class="swiper-slides case-study-item">
+                                    <div class="case__study-thumb">
+                                        <img src="/assets/img/case-study-2.jpg"
+                                             alt="image not found" />
+                                        <div class="case__study-content">
+                                            <h3><a href="/case-details/2">Problem Solutions</a></h3>
+                                            <p>
+                                                If you’ve built up your IT system over a period of
+                                                time.
+                                            </p>
+                                            <a class="case__study-btn" href="/case-details/2">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide-duplicate"
+                                 data-swiper-slide-index="2"
+                                 role="group"
+                                 aria-label="3 / 6"
+                                 style="width: 384.667px; margin-right: 30px">
+                                <div class="swiper-slides case-study-item">
+                                    <div class="case__study-thumb">
+                                        <img src="/assets/img/case-study-3.jpg"
+                                             alt="image not found" />
+                                        <div class="case__study-content">
+                                            <h3><a href="/case-details/3">Web Analysis</a></h3>
+                                            <p>
+                                                If you’ve built up your IT system over a period of
+                                                time.
+                                            </p>
+                                            <a class="case__study-btn" href="/case-details/3">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="swiper-notification"
+                              aria-live="assertive"
+                              aria-atomic="true"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="testimonial__area include__bg pt-120 pb-120"
+                 style="background: url('/assets/img/bg/testimonial-map.png')">
+            <div class="container">
+                <div class="row wow fadeInUp" data-wow-delay=".3s">
+                    <div class="section__title-wrapper text-center mb-50">
+                        <div class="section__title-one">
+                            <span>// Testimonials //</span>
+                            <h2>User feedbacks</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row wow fadeInUp" data-wow-delay=".3s">
+                    <div class="col-12">
+                        <div class="testimonial__active-2 swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper swiper-initialized swiper-horizontal swiper-backface-hidden"
+                                     autoplaydisableoninteraction="false">
+                                    <div class="swiper-wrapper"
+                                         id="swiper-wrapper-3a3f55e49afc710e8"
+                                         aria-live="off"
+                                         style="
+                        transition-duration: 0ms;
+                        transform: translate3d(-2292px, 0px, 0px);
+                      ">
+                                        <div class="swiper-slide swiper-slide-duplicate"
+                                             data-swiper-slide-index="0"
+                                             style="width: 352px; margin-right: 30px"
+                                             role="group"
+                                             aria-label="1 / 3">
+                                            <div class="swiper-slides">
+                                                <div class="testimonial__item-one">
+                                                    <div class="testimonial__item-one-content">
+                                                        <p>
+                                                            “ The worlds #1 web data platform from data
+                                                            collection infrastructure to ready-made
+                                                            datasets, brights tow allow you to retrieve the
+                                                            public web data you care about. ”
+                                                        </p>
+                                                    </div>
+                                                    <div class="testimonial-author d-flex
+                              align-items-center">
+                                                        <div class="testimonial-author-img">
+                                                            <img src="/assets/img/author-01.png"
+                                                                 alt="image not found" />
+                                                        </div>
+                                                        <div class="testimonial-author-content">
+                                                            <h4>Miranda Helson</h4>
+                                                            <span>Head Of Idea</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-duplicate"
+                                             data-swiper-slide-index="1"
+                                             style="width: 352px; margin-right: 30px"
+                                             role="group"
+                                             aria-label="2 / 3">
+                                            <div class="swiper-slides">
+                                                <div class="testimonial__item-one">
+                                                    <div class="testimonial__item-one-content">
+                                                        <p>
+                                                            “ The worlds #2 web data platform from data
+                                                            collection infrastructure to ready-made
+                                                            datasets, brights tow allow you to retrieve the
+                                                            public web data you care about. ”
+                                                        </p>
+                                                    </div>
+                                                    <div class="testimonial-author d-flex align-items-center">
+                                                        <div class="testimonial-author-img">
+                                                            <img src="/assets/img/author-02.png"
+                                                                 alt="image not found" />
+                                                        </div>
+                                                        <div class="testimonial-author-content">
+                                                            <h4>Alexis D. Dowson</h4>
+                                                            <span>Founder</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev"
+                                             data-swiper-slide-index="2"
+                                             style="width: 352px; margin-right: 30px"
+                                             role="group"
+                                             aria-label="3 / 3">
+                                            <div class="swiper-slides">
+                                                <div class="testimonial__item-one">
+                                                    <div class="testimonial__item-one-content">
+                                                        <p>
+                                                            “ The worlds #3 web data platform from data
+                                                            collection infrastructure to ready-made
+                                                            datasets, brights tow allow you to retrieve the
+                                                            public web data you care about. ”
+                                                        </p>
+                                                    </div>
+                                                    <div class="testimonial-author d-flex align-items-center">
+                                                        <div class="testimonial-author-img">
+                                                            <img src="/assets/img/author-03.png"
+                                                                 alt="image not found" />
+                                                        </div>
+                                                        <div class="testimonial-author-content">
+                                                            <h4>Steven Smith</h4>
+                                                            <span>Designer</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-duplicate-active"
+                                             data-swiper-slide-index="0"
+                                             style="width: 352px; margin-right: 30px"
+                                             role="group"
+                                             aria-label="1 / 3">
+                                            <div class="swiper-slides">
+                                                <div class="testimonial__item-one">
+                                                    <div class="testimonial__item-one-content">
+                                                        <p>
+                                                            “ The worlds #1 web data platform from data
+                                                            collection infrastructure to ready-made
+                                                            datasets, brights tow allow you to retrieve the
+                                                            public web data you care about. ”
+                                                        </p>
+                                                    </div>
+                                                    <div class="testimonial-author d-flex align-items-center">
+                                                        <div class="testimonial-author-img">
+                                                            <img src="/assets/img/author-01.png"
+                                                                 alt="image not found" />
+                                                        </div>
+                                                        <div class="testimonial-author-content">
+                                                            <h4>Miranda Helson</h4>
+                                                            <span>Head Of Idea</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-duplicate-next"
+                                             data-swiper-slide-index="1"
+                                             style="width: 352px; margin-right: 30px"
+                                             role="group"
+                                             aria-label="2 / 3">
+                                            <div class="swiper-slides">
+                                                <div class="testimonial__item-one">
+                                                    <div class="testimonial__item-one-content">
+                                                        <p>
+                                                            “ The worlds #2 web data platform from data
+                                                            collection infrastructure to ready-made
+                                                            datasets, brights tow allow you to retrieve the
+                                                            public web data you care about. ”
+                                                        </p>
+                                                    </div>
+                                                    <div class="testimonial-author d-flex align-items-center">
+                                                        <div class="testimonial-author-img">
+                                                            <img src="/assets/img/author-02.png"
+                                                                 alt="image not found" />
+                                                        </div>
+                                                        <div class="testimonial-author-content">
+                                                            <h4>Alexis D. Dowson</h4>
+                                                            <span>Founder</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-prev"
+                                             data-swiper-slide-index="2"
+                                             style="width: 352px; margin-right: 30px"
+                                             role="group"
+                                             aria-label="3 / 3">
+                                            <div class="swiper-slides">
+                                                <div class="testimonial__item-one">
+                                                    <div class="testimonial__item-one-content">
+                                                        <p>
+                                                            “ The worlds #3 web data platform from data
+                                                            collection infrastructure to ready-made
+                                                            datasets, brights tow allow you to retrieve the
+                                                            public web data you care about. ”
+                                                        </p>
+                                                    </div>
+                                                    <div class="testimonial-author d-flex align-items-center">
+                                                        <div class="testimonial-author-img">
+                                                            <img src="/assets/img/author-03.png"
+                                                                 alt="image not found" />
+                                                        </div>
+                                                        <div class="testimonial-author-content">
+                                                            <h4>Steven Smith</h4>
+                                                            <span>Designer</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-active"
+                                             data-swiper-slide-index="0"
+                                             style="width: 352px; margin-right: 30px"
+                                             role="group"
+                                             aria-label="1 / 3">
+                                            <div class="swiper-slides">
+                                                <div class="testimonial__item-one">
+                                                    <div class="testimonial__item-one-content">
+                                                        <p>
+                                                            “ The worlds #1 web data platform from data
+                                                            collection infrastructure to ready-made
+                                                            datasets, brights tow allow you to retrieve the
+                                                            public web data you care about. ”
+                                                        </p>
+                                                    </div>
+                                                    <div class="testimonial-author d-flex align-items-center">
+                                                        <div class="testimonial-author-img">
+                                                            <img src="/assets/img/author-01.png"
+                                                                 alt="image not found" />
+                                                        </div>
+                                                        <div class="testimonial-author-content">
+                                                            <h4>Miranda Helson</h4>
+                                                            <span>Head Of Idea</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-next"
+                                             data-swiper-slide-index="1"
+                                             style="width: 352px; margin-right: 30px"
+                                             role="group"
+                                             aria-label="2 / 3">
+                                            <div class="swiper-slides">
+                                                <div class="testimonial__item-one">
+                                                    <div class="testimonial__item-one-content">
+                                                        <p>
+                                                            “ The worlds #2 web data platform from data
+                                                            collection infrastructure to ready-made
+                                                            datasets, brights tow allow you to retrieve the
+                                                            public web data you care about. ”
+                                                        </p>
+                                                    </div>
+                                                    <div class="testimonial-author d-flex align-items-center">
+                                                        <div class="testimonial-author-img">
+                                                            <img src="/assets/img/author-02.png"
+                                                                 alt="image not found" />
+                                                        </div>
+                                                        <div class="testimonial-author-content">
+                                                            <h4>Alexis D. Dowson</h4>
+                                                            <span>Founder</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev"
+                                             data-swiper-slide-index="2"
+                                             role="group"
+                                             aria-label="3 / 3"
+                                             style="width: 352px; margin-right: 30px">
+                                            <div class="swiper-slides">
+                                                <div class="testimonial__item-one">
+                                                    <div class="testimonial__item-one-content">
+                                                        <p>
+                                                            “ The worlds #3 web data platform from data
+                                                            collection infrastructure to ready-made
+                                                            datasets, brights tow allow you to retrieve the
+                                                            public web data you care about. ”
+                                                        </p>
+                                                    </div>
+                                                    <div class="testimonial-author d-flex align-items-center">
+                                                        <div class="testimonial-author-img">
+                                                            <img src="/assets/img/author-03.png"
+                                                                 alt="image not found" />
+                                                        </div>
+                                                        <div class="testimonial-author-content">
+                                                            <h4>Steven Smith</h4>
+                                                            <span>Designer</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="swiper-notification"
+                                          aria-live="assertive"
+                                          aria-atomic="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="news__area pt-120 pb-55">
+            <div class="container">
+                <div class="row wow fadeInUp" data-wow-delay=".3s">
+                    <div class="col-lg-8 col-8">
+                        <div class="section__title-one mb-50">
+                            <span>// News</span>
+                            <h2>News &amp; Insights</h2>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-4">
+                        <div class="news__button mt-15 text-lg-end d-none d-md-block">
+                            <a class="it__btn-3" href="/blog">
+                                <span>More News</span><i class="bdevs-btn-icon fas fa-angle-right"
+                                                         aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row wow fadeInUp" data-wow-delay=".3s">
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="news__singel-item mb-60">
+                            <div class="news__item-thumb mb-35">
+                                <a href="/blog-details/1">
+                                    <img src="/assets/img/thumb-01.jpg"
+                                         alt="image not found" />
+                                </a><a class="news__tag" href="/blog-details/1">It solution</a>
+                            </div>
+                            <div class="news__item-content">
+                                <div class="news__item-meta mb-10">
+                                    <ul>
+                                        <li>
+                                            <i class="fa-light fa-calendar-days"></i><span>Jul 10, 2022</span>
+                                        </li>
+                                        <li>
+                                            <a href="/blog-details/1"><i class="fa-solid fa-user"></i>Romarola H.</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h3 class="news__title">
+                                    <a href="/blog-details/1">That will bring together 20 industry leading speakers</a>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="news__singel-item mb-60">
+                            <div class="news__item-thumb mb-35">
+                                <a href="/blog-details/2">
+                                    <img src="/assets/img/thumb-02.jpg"
+                                         alt="image not found" />
+                                </a><a class="news__tag" href="/blog-details/2">Technology</a>
+                            </div>
+                            <div class="news__item-content">
+                                <div class="news__item-meta mb-10">
+                                    <ul>
+                                        <li>
+                                            <i class="fa-light fa-calendar-days"></i><span>Aug 10, 2022</span>
+                                        </li>
+                                        <li>
+                                            <a href="/blog-details/2"><i class="fa-solid fa-user"></i>Steven</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h3 class="news__title">
+                                    <a href="/blog-details/2">DevFest for Ukraine is a charitable tech conference</a>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="news__singel-item mb-60">
+                            <div class="news__item-thumb mb-35">
+                                <a href="/blog-details/3">
+                                    <img src="/assets/img/thumb-03.jpg"
+                                         alt="image not found" />
+                                </a><a class="news__tag" href="/blog-details/3">Web Security</a>
+                            </div>
+                            <div class="news__item-content">
+                                <div class="news__item-meta mb-10">
+                                    <ul>
+                                        <li>
+                                            <i class="fa-light fa-calendar-days"></i><span>Aug 16, 2022</span>
+                                        </li>
+                                        <li>
+                                            <a href="/blog-details/3"><i class="fa-solid fa-user"></i>Perkar</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h3 class="news__title">
+                                    <a href="/blog-details/3">
+                                        In times like these, uniting efforts &amp; working
+                                        together
+                                    </a>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="newslatter__area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="newslatter__wrapper">
+                            <div class="row align-items-center">
+                                <div class="col-xl-6 col-lg-5">
+                                    <div class="section__title-one">
+                                        <span>// newsletter</span>
+                                        <h2>User feedbacks</h2>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-7">
+                                    <div class="newslatter__form-wrapper">
+                                        <form>
+                                            <div class="newslatter__input">
+                                                <input type="email"
+                                                       placeholder="Email address"
+                                                       style="
+                              background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpiYmZkZTQxOS00ZGRkLWU5NDYtOWQ2MC05OGExNGJiMTA3N2YiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RDAyNDkwMkRDOTIyMTFFNkI0MzFGRTk2RjM1OTdENTciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RDAyNDkwMkNDOTIyMTFFNkI0MzFGRTk2RjM1OTdENTciIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OTU2NTE1NDItMmIzOC1kZjRkLTk0N2UtN2NjOTlmMjQ5ZGFjIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOmJiZmRlNDE5LTRkZGQtZTk0Ni05ZDYwLTk4YTE0YmIxMDc3ZiIv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') !important;
+                              background-repeat: no-repeat;
+                              background-size: 20px;
+                              background-position: 97% center;
+                              cursor: auto;
+                            "
+                                                       data-temp-mail-org="2" /><i class="fa-solid fa-envelope-open"></i><button>newsletter</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    @Html.Sitecore().Placeholder("Footer")
+    <div class="Toastify"></div>
+</body>
+</html>

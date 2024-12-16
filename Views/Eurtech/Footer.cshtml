@@ -1,0 +1,164 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@using Sitecore.Mvc.Helpers
+@using Sitecore.Data
+@using Sitecore.Data.Items
+@using Sitecore.Data.Fields
+
+
+@{
+    Layout = null;
+
+    Item Itemdata = (Item)Model;
+}
+
+<footer>
+    <section class="footer__area footer-bg pt-200"
+             style="background-image: url('')">
+        <div class="">
+            <div class="container">
+                <div class="footer-main__wrapper pb-40">
+                    <div class="row">
+                        <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                            <div class="footer__widget footer-col-1 mb-60">
+                                <div class="footer__title"><h4>
+                                            @*About Us*@
+                                            @Html.Sitecore().Field("AboutUs",Itemdata)
+                                     </h4></div>
+                                <div class="footer__content">
+                                    <p>
+                                        @*Learn from industry-leading speakers like Romain Guy and
+                                        Chet Haase who have been building Android since 1.0,
+                                        Jhey Tompkins and Una Kravets from the Google Chrome
+                                        team.*@
+                                        @Html.Sitecore().Field("Description",Itemdata)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                            <div class="footer__widget footer-col-2 mb-60">
+                                <div class="footer__title"><h4>@Html.Sitecore().Field("Pages", Itemdata)</h4></div>
+                                <div class="footer__link">
+                                    <ul>
+                                        <li>
+                                            <a href="https://eurtech-react.vercel.app/about">@Html.Sitecore().Field("Aboutus", Itemdata)</a>
+
+                                        </li>
+                                        <li><a href="https://eurtech-react.vercel.app/team">@Html.Sitecore().Field("OurTeam", Itemdata)</a></li>
+                                        <li><a href="https://eurtech-react.vercel.app/service">@Html.Sitecore().Field("Services", Itemdata)</a></li>
+                                        <li><a href="https://eurtech-react.vercel.app/faq">@Html.Sitecore().Field("Faq", Itemdata)</a></li>
+                                        <li><a href="https://eurtech-react.vercel.app/pricing">@Html.Sitecore().Field("Price", Itemdata)</a></li>
+                                        <li><a href="https://eurtech-react.vercel.app/news">@Html.Sitecore().Field("News", Itemdata)</a></li>
+                                        <li><a href="https://eurtech-react.vercel.app/case-study">@Html.Sitecore().Field("CaseStudy", Itemdata)</a></li>
+                                        <li><a href="https://eurtech-react.vercel.app/contact">@Html.Sitecore().Field("Contact", Itemdata)</a></li>
+                                        <li class="custom__link">
+                                            <a href="https://eurtech-react.vercel.app/error">@Html.Sitecore().Field("404Page", Itemdata)</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://eurtech-react.vercel.app/pricing">@Html.Sitecore().Field("Membership", Itemdata)</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                            <div class="footer__widget footer-col-3 mb-60">
+                                <div class="footer__title"><h4>@Html.Sitecore().Field("OurServices", Itemdata)</h4></div>
+                                <div class="footer__link-2">
+                                    <ul>
+                                        <li>
+                                            <a href="https://eurtech-react.vercel.app/service">@Html.Sitecore().Field("SoftwareSolution", Itemdata)</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://eurtech-react.vercel.app/service">@Html.Sitecore().Field("DigitalMarketing", Itemdata)</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://eurtech-react.vercel.app/service">@Html.Sitecore().Field("UiUx", Itemdata)</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://eurtech-react.vercel.app/service">@Html.Sitecore().Field("WebDev", Itemdata)</a>
+                                        </li>
+                                        <li class="custom__link">
+                                            <a href="https://eurtech-react.vercel.app/service">@Html.Sitecore().Field("Online", Itemdata)</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-3 col-xl-3 offset-xxl-1 col-lg-4 col-md-6 col-sm-6">
+                            <div class="footer__widget footer-col-4 mb-60">
+                                <div class="footer__title"><h4>@Html.Sitecore().Field("OurAvailability", Itemdata)</h4></div>
+                                <div class="footer__contact">
+                                    <div class="footer__contact-item">
+                                        <span>@Html.Sitecore().Field("MonFri", Itemdata)</span>
+                                        @*<p class="mb-20">10:00 am to 06:00 pm</p>*@
+                                    </div>
+                                    <div class="footer__contact-item">
+                                        <span>@Html.Sitecore().Field("Saturday", Itemdata)</span>
+                                        @*<p class="mb-25">08:00 am to 04:00 pm</p>*@
+                                    </div>
+                                    <div class="footer__support">
+                                        <div class="footer__support-inner">
+                                            <div class="footer__support-icon">
+                                                @*<img src="/assets/img/message.png"
+                                                     alt="image not found" />*@
+                                                @Html.Sitecore().Field("Icon", Itemdata)
+                                            </div>
+                                            <div class="footer__support-title">
+                                                <span>@Html.Sitecore().Field("Emergency", Itemdata)</span>
+                                                <a href="tel:00011122233">@Html.Sitecore().Field("Number", Itemdata)</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="footer__info-area">
+                            <div class="row align-items-center">
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="footer__logo">
+                                        <a href="/">
+                                            @*<img src="/assets/img/logo-2.png"
+                                                 alt="logo not found" />*@
+                                            @Html.Sitecore().Field("logo", Itemdata)
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="footer__link-3 text-sm-end">
+                                        <ul>
+                                            <li><a href="https://eurtech-react.vercel.app/about">@Html.Sitecore().Field("About", Itemdata)</a></li>
+                                            <li><a href="https://eurtech-react.vercel.app/faq">@Html.Sitecore().Field("Faq", Itemdata)</a></li>
+                                            <li><a href="https://eurtech-react.vercel.app/contact">@Html.Sitecore().Field("contact", Itemdata)</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <div class="container">
+                    <div class="copyright__text">
+                        <p>
+                            @*Copyright &amp; design by
+                            <a href="https://themeforest.net/user/bdevs/portfolio">
+
+                            </a>
+                            - 2022*@
+                            @Html.Sitecore().Field("Copyright", Itemdata)
+                            
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</footer>

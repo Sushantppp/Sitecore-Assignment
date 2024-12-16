@@ -1,0 +1,51 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@using Sitecore.Mvc.Helpers
+@{
+    Layout = null;
+}
+
+<div class="hero__area">
+    <div class="hero__item hero__height hero__bg d-flex align-items-center p-relative"
+         style="background: url('/assets/img/hero-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-6 col-xl-7 col-lg-8 col-md-10">
+                    <div class="hero__content">
+                        @*<span>We Provide Outsourced</span>*@
+                        <span>@Html.Sitecore().Field("Title")</span>
+                        @*<h2>IT Solution</h2>*@
+                        @Html.Sitecore().Field("SubTitle")
+                    <p>
+                        @*IT producers worldwide face similar challenges around animal
+        welfare, farm profitability, product and work efficiency.*@
+                        @Html.Sitecore().Field("Description")
+                    </p>
+                        <div class="hero__btn-wrapper">
+                            <a class="it__btn-2" href="/about">
+                                @*Get Started*@
+                                @Html.Sitecore().Field("Getstarted")
+                                <span>
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </span>
+                            </a>
+                            <div class="hero__btn-link">
+                                <ul>
+                                    <li>
+                                        <span class="hero__video-btn popup-video">
+                                            ▶
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="hero__video-intro popup-video">@Html.Sitecore().Field("IntroVideo")</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

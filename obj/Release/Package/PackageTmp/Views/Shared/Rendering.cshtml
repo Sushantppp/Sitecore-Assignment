@@ -1,0 +1,52 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@using Sitecore.Mvc.Helpers
+
+<div class="container">
+    <h2 class="heading">@Html.Sitecore().Field("Title")</h2>
+
+    <div class="partner-section">
+        <div class="icons">
+            @*<img src="/images/first.png" alt="logo">*@
+            @Html.Sitecore().Field("Logo")
+        </div>
+        <div class="logos">
+            <div class="partner-logo">
+                @*<img src="~/images/sitecore.png" alt="Sitecore">*@
+                @Html.Sitecore().Field("Partner1")
+            </div>
+            <div class="partner-logo">
+                @*<img src="/images/acquia.png" alt="Acquia">*@
+                @Html.Sitecore().Field("Partner2")
+            </div>
+            <div class="partner-logo">
+                @*<img src="/images/drupal.jpg" alt="Drupal">*@
+                @Html.Sitecore().Field("Partner3")
+            </div>
+            <div class="partner-logo">
+                @*<img src="/images/contentful.jpg" alt="Contentful">*@
+                @Html.Sitecore().Field("Partner4")
+            </div>
+            <div class="partner-logo">
+                @*<img src="/images/commercetools.jpg" alt="Commercetools">*@
+                @Html.Sitecore().Field("Partner5")
+            </div>
+            <div class="partner-logo">
+                @*<img src="/images/bigcommerce.jpg" alt="B2B">*@
+                @Html.Sitecore().Field("Partner6")
+            </div>
+            <div class="partner-logo">
+                @*<img src="/images/shopify.jpg" alt="Shopify">*@
+                @Html.Sitecore().Field("Partner7")
+            </div>
+            <div class="partner-logo">
+                @*<img src="/images/magento.jpg" alt="magento">*@
+                @Html.Sitecore().Field("Partner8")
+            </div>
+            <div class="partner-logo">
+                @*<img src="/images/sitecore-ordercloud.jpg" alt="sitecore-ordercloud">*@
+                @Html.Sitecore().Field("Partner9")
+            </div>
+        </div>
+    </div>
+</div>
